@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+</head>
+<body>
+    <style>
+   
+   body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+
+    a{
+        text-decoration: none;
+        padding: 10px;
+        font-size: 20px;
+        text-transform: capitalize;
+        color:#000000;
+    }
+
+    .header1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    h1{
+        text-transform: capitalize;
+        color: #00008b;
+    }
+
+    #close,#open{
+        display: none;
+        text-transform: uppercase
+    }
+
+    section{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.section1{
+    text-align: center;
+    margin: 20px;
+}
+
+hr{
+    color:blue ;
+}
+
+h3{
+    background-color: darkblue;
+    padding: 10px;
+    color: aliceblue;
+}
+
+
+footer{
+    background-color: gray;
+    padding: 10px;
+    color: aliceblue;
+    text-align: center;
+}
+
+    @media(max-width:700px){
+        nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            transition: top 2s;
+            right: 1px;
+            left: -2px;
+            top: -720px;
+            background-color: lightblue;
+            width: 100%;
+        }
+
+        #close,#open{
+        display: block;
+        cursor: pointer;
+        color: #00008b;
+        }
+    }
+</style>
+<body>
+    <header>
+        <div class="header1">
+            <h1>Africa'a</h1>
+            
+            <nav>
+                <a href="#" id="close">X</a>
+                <a href="Home.html">home</a>
+                <a href="Histoire.html">histoire</a>
+                <a href="#">about</a>
+                <a href="Comtact.html">Contact us</a>
+            </nav>
+            <h2 id="open">Menu</h2>
+        </div>
+        <div class="header2"></div>
+    </header>
+
+    <section>
+
+        <div class="section1">
+            <h3>Who We Are</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, pariatur corporis perspiciatis iure suscipit maxime odit laudantium eos inventore corrupti modi. Rem, nostrum. Voluptas aliquid nam laudantium consequatur eligendi ipsam aperiam quo ipsum nobis minus sequi, dignissimos eius dolorum? Quo.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias ipsum voluptatem officia, pariatur esse doloremque hic aliquid eveniet reprehenderit natus!</p>
+            <hr>
+
+        </div><br/><br/>
+
+        <div class="section1">
+            <h3>What We do</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, pariatur corporis perspiciatis iure suscipit maxime odit laudantium eos inventore corrupti modi. Rem, nostrum. Voluptas aliquid nam laudantium consequatur eligendi ipsam aperiam quo ipsum nobis minus sequi, dignissimos eius dolorum? Quo.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias ipsum voluptatem officia, pariatur esse doloremque hic aliquid eveniet reprehenderit natus!</p>
+            <hr>
+
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <h1>CopyWrite</h1>
+    </footer>
+
+    <!--java-script-->
+    <script>
+       let nav = document.querySelector('nav');
+       let open = document.querySelector('#open');
+       let close = document.querySelector('#close')
+
+       open.addEventListener('click',function(){
+        nav.style.top='1px';
+       })
+
+       close.addEventListener('click',function(){
+        nav.style.top='-720px';
+       })
+    </script>
+</body>
+</html>

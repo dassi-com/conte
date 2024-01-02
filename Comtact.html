@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <style>
+         body{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        a{
+            text-decoration: none;
+            padding: 10px;
+            font-size: 20px;
+            text-transform: capitalize;
+            color:#000000;
+        }
+
+        header{
+            margin-bottom: 5rem;
+        }
+    
+        .header1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            width: 80%;
+            margin: 0 auto;
+        }
+    
+        h1{
+            text-transform: capitalize;
+            color: #00008b;
+        }
+    
+        #close,#open{
+            display: none;
+            text-transform: uppercase
+        }
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        input{
+            padding: 5px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #000000;
+            background: transparent;
+            font-size: 13px;
+        }
+
+        label{
+            font-size: 20px;
+        }
+
+        footer{
+            background-color: #00008b;
+            color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 6em;
+        }
+    
+        @media(max-width:700px){
+            nav{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                transition: top 2s;
+                right: 1px;
+                left: -2px;
+                top: -720px;
+                background-color: darkblue;
+                width: 100%;
+            }
+    
+            #open{
+            display: block;
+            cursor: pointer;
+            color: #00008b;
+            }
+            #close{
+                color: aliceblue;
+                display: block;
+                cursor: pointer;
+            }
+        }
+    </style>
+    <body>
+        <header>
+            <div class="header1">
+                <h1>Africa'a</h1>
+                
+                <nav>
+                    <a href="#" id="close">X</a>
+                    <a href="Home.html">home</a>
+                    <a href="About.html">about</a>
+                    <a href="Histoire.html">Histoire</a>
+                    <a href="#">Contact us</a>
+                </nav>
+                <h3 id="open">Menu</h3>
+            </div>
+            <div class="header2"></div>
+        </header>
+
+        <section>
+            <div>
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your name"><br><br>
+          <label>Surname</label>
+          <input type="text" placeholder="Enter your surname"><br><br>
+          <label>Contact</label>
+          <input type="text" placeholder="Enter your phone"><br><br>
+          <label>Email</label>
+          <input type="text" placeholder="Enter your email"><br><br>
+
+          <h1>Contact us:(+237) 677 88 33 01</h1>
+            </div>
+        </section>
+
+        <footer>
+            <h2>CopyWrite</h2>
+        </footer>
+    
+        <!--java-script-->
+        <script>
+           let nav = document.querySelector('nav');
+           let open = document.querySelector('#open');
+           let close = document.querySelector('#close')
+    
+           open.addEventListener('click',function(){
+            nav.style.top='1px';
+           })
+    
+           close.addEventListener('click',function(){
+            nav.style.top='-720px';
+           })
+        </script>
+</body>
+</html>

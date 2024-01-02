@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+      body{
+        color: antiquewhite;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-image: url(w.jpg);
+        background-repeat: no-repeat;
+        background-position: fixed;
+        background-attachment:center ;
+        background-size: cover;
+       
+      }
+    
+    a{
+        text-decoration: none;
+        padding: 10px;
+        font-size: 20px;
+        text-transform: capitalize;
+        color: #f0f8ff;
+
+
+    }
+
+    .header1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .header2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .para{
+        text-align: center;
+    }
+
+    span{
+        text-shadow: #e94103 1px 0 10px;
+        position: relative;
+        left: 60px;
+    }
+
+   .title{
+    font-size: 50px;
+   }
+
+    h1{
+        color: aliceblue;
+    }
+
+    h3{
+        text-shadow: #0a0180 1px 0 10px;
+    }
+
+    #close,#open{
+        display: none;
+        text-transform: uppercase
+    }
+
+    @media(max-width:700px){
+        nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            transition: top 2s;
+            right: 1px;
+            left: -2px;
+            top: -720px;
+            background-color: #00008b;
+            width: 100%;
+        }
+
+        #close,#open{
+        display: block;
+        cursor: pointer;
+        }
+    }
+</style>
+<body>
+    <header>
+        <div class="header1">
+            <h1>Africa'a</h1> 
+            
+            <nav>
+                <a href="#" id="close">X</a>
+                <a href="#">home</a>
+                <a href="Histoire.html">histoire</a>
+                <a href="About.html">about</a>
+                <a href="Comtact.html">Contact us</a>
+            </nav>
+            <h3 id="open">Menu</h3>
+        </div><br><br><br><br><br>
+        <div class="header2">
+             <div class="para">
+            <h1 class="title">  Contes et<br> <span>Devinettes</span><br> D'Afrique Noire</h1>
+            <p>L'afrique noire est pleine de d'histoire et de devinettes</p>
+            <h3>Un Homme sans culture est une personne sans àme</h3>
+             </div>
+        </div>
+    </header>
+
+    <!--java-script-->
+    <script>
+       let nav = document.querySelector('nav');
+       let open = document.querySelector('#open');
+       let close = document.querySelector('#close')
+
+       open.addEventListener('click',function(){
+        nav.style.top='1px';
+       })
+
+       close.addEventListener('click',function(){
+        nav.style.top='-720px';
+       })
+    </script>
+
+</body>
+</html>
